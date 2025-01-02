@@ -1,0 +1,86 @@
+.skills {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: black;
+
+    @media screen and (max-width:768px) {
+        height: 160px;
+    }
+
+   
+
+
+    .skillsWrap {
+        position: relative;
+
+        z-index: 3;
+        rotate: 0deg;
+
+        .slide {
+            overflow: hidden;
+            display: flex;
+            gap: 10px;
+
+            .logos {
+
+                display: flex;
+                gap: 10px;
+
+                .logo {
+                    width: 100px;
+                    height: 100px;
+                    aspect-ratio: 1;
+                    
+                    @media screen and (max-width:768px) {
+                        width: 80px;
+                        height: 80px;
+                
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        filter: grayscale(1);
+                    }
+                }
+
+                .logo:nth-child(5) {
+
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.skills::before,
+.skills::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 800px;
+    top: 0px;
+    z-index: 5;
+    pointer-events: none;
+
+    @media screen and (max-width:768px) {
+        width: 200px;
+
+    }
+}
+
+.skills::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.skills::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}

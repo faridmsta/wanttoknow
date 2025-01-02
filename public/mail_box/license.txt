@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mail Box
+* source:	https://sketchfab.com/3d-models/mail-box-46b7907bec634452b45d01cafce0cb71
+* author:	bikravnis (https://sketchfab.com/bikravnis)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mail Box" (https://sketchfab.com/3d-models/mail-box-46b7907bec634452b45d01cafce0cb71) by bikravnis (https://sketchfab.com/bikravnis) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

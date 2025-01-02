@@ -1,0 +1,25 @@
+.loading{
+    position: relative;
+    background-color: black;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        color: white;
+        font-size: 10rem;
+        font-family: var(--font);
+        @media screen and (max-width:768px){
+            font-size: 6rem;
+            
+        }
+    }
+    .loadingBar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 10px;
+        background:#63326e;
+    }
+}

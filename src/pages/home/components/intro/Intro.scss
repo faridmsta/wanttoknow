@@ -1,0 +1,125 @@
+.intro {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+
+    .introInner {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width:768px) {
+
+            flex-direction: column;
+        }
+
+        .left {
+            width: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+
+            }
+
+          
+
+            .name,
+            .job {
+                overflow: hidden;
+                display: flex;
+                gap: 5px;
+                font-family: var(--font);
+                font-weight: 800;
+            }
+
+            .name {
+                font-size: clamp(1.5rem, 1.0645rem + 2.1505vw, 3rem);
+
+                span:nth-child(5) {
+                    padding-right: 20px;
+
+                    @media screen and (max-width:768px) {
+                        padding-right: 5px;
+
+                    }
+
+                }
+            }
+
+            .job {
+                font-size: clamp(1.2rem, 0.8148rem + 1.3169vw, 2rem);
+                color: #63326e;
+
+                span:nth-child(9) {
+                    padding-right: 10px;
+
+                    @media screen and (max-width:768px) {
+                        padding-right: 0px;
+
+                    }
+
+                }
+
+                span:nth-child(1) {
+                    color: #63326e;
+                }
+
+                span:nth-child(2) {
+                    color: #63326e;
+                }
+
+                span:nth-child(3) {
+                    color: #63326e;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+
+            }
+
+            .image {
+                position: relative;
+                width: 100%;
+
+                .img {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: grayscale(1);
+                    }
+                }
+
+                .svg {
+                    position: absolute;
+                    top: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    & svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

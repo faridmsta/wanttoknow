@@ -1,0 +1,176 @@
+.projectsRelative {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    background-color: black;
+
+    .projects {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+        .projectsInner {
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            .sites {
+                margin-left: 10%;
+                display: flex;
+                align-items: center;
+                gap: 50px;
+
+                .siteWrap {
+                    
+                    // overflow: hidden;
+                    position: relative;
+                    width: 500px;
+                    height: 600;
+                    cursor: default;
+                    
+                    @media screen and (max-width:768px) {
+                        width: 200px;
+                        height: 400;
+                        
+                    }
+
+                    .customCursor {
+                        
+                        font-family: var(--font);
+                        position: absolute;
+                        pointer-events: none;
+                        text-decoration: none;
+                        background-color: #63326e;
+                        
+                        padding: 10px;
+                        color: white;
+                        border-radius: 10px;
+                        white-space: nowrap;
+                        z-index: 1;
+                        transform: translate(-50%, -50%);
+                        @media screen and (max-width:768px) {
+                            display: none;
+                            
+                            
+                        }
+                    }
+
+
+                    .site {
+                        cursor: none;
+                        // overflow: hidden;
+                        display: inline-block;
+                        width: 100%;
+                        color: white;
+                        text-decoration: none;
+                        font-family: var(--font);
+
+                        .image {
+                            position: relative;
+                            // overflow: hidden;
+                            width: 100%;
+
+                            aspect-ratio: 1.5;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        h4 {
+                            margin: 20px 0;
+                            font-size: 2rem;
+                            @media screen and (max-width:768px) {
+                                font-size: 1rem;
+                               
+                                
+                            }
+                        }
+                    }
+
+                    .githubLink {
+                        position: relative;
+                        text-decoration: none;
+                        z-index: 2;
+                        .githubLinkInner {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px;
+                            width: 100%;
+                            height: 50px;
+                            font-family: var(--font);
+                            color: white;
+
+
+                            background: rgba(99, 50, 110, 0.16);
+                            border-radius: 16px;
+                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                            backdrop-filter: blur(11.1px);
+                            -webkit-backdrop-filter: blur(11.1px);
+                            border: 1px solid rgba(99, 50, 110, 0.26);
+                        }
+
+                    }
+                }
+            }
+        }
+        .sites {
+            position: relative;
+            .sitesAfter{
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 80vw;
+                // background: red;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                a{
+                    padding-left:10vw ;
+                    text-decoration: none;
+                    color: white;
+                    font-family: var(--font);
+                    font-size: clamp(2rem, 1.5185rem + 1.6461vw, 3rem);
+                }
+
+            }
+        }
+    }
+}
+
+.projectsRelative::before,
+.projectsRelative::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    top: 0px;
+    z-index: 5;
+    pointer-events: none;
+
+    @media screen and (max-width:768px) {
+        width: 150px;
+
+    }
+    @media screen and (max-width:425px) {
+        width: 100px;
+
+    }
+}
+
+.projectsRelative::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.projectsRelative::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
