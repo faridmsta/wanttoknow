@@ -1,5 +1,6 @@
 import './Intro.scss'
 import me from './../../../../components/img/meBlack.png'
+import meMin from './../../../../components/img/meBlack-min.png'
 import { motion as m } from 'framer-motion'
 
 
@@ -83,6 +84,13 @@ function Intro() {
                   transition={{ duration: 1, delay: 3 }}
 
                   src={me} alt="" />
+                <m.img
+                  loading="lazy"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 3 }}
+
+                  src={meMin} alt="" />
 
               </div>
               <div className="svg">
