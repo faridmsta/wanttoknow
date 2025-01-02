@@ -106,7 +106,6 @@ function App() {
               <Header setVisibleSection={setVisibleSection}   />
               <Routes location={location} key={location.pathname} >
                 <Route path='/' element={<PageAnimator><Home /></PageAnimator>} />
-                <Route path='/*' element={<PageAnimator><Home /></PageAnimator>} />
               </Routes>
             </AnimatePresence>
           </m.div>

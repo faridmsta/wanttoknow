@@ -217,7 +217,7 @@ const SiteCard = ({ item }: { item: any }) => {
               </m.div>
             )}
           </AnimatePresence>
-          <img src={item.image} alt={item.title} />
+          <img loading='lazy' src={item.image} alt={item.title} />
         </m.div>
         <h4>{item.title}</h4>
       </a>

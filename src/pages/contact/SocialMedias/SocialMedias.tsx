@@ -100,7 +100,9 @@ function SocialMedias() {
               className="socialMediaWrapper">
               <div className="imageWrap">
                 <div className="image">
-                  <img src={social.image} alt="" />
+                  <img
+                  loading='lazy'
+                    src={social.image} alt="" />
                 </div>
                 <div className="image">
                   <h2>{social.text}</h2>
