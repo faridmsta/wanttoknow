@@ -29,7 +29,7 @@ import { motion as m } from 'framer-motion';
 
 function SkillsPage() {
     const [isHovered, setIsHovered] = useState(false); // State to track hover
-    const [isHovered2, setIsHovered2] = useState(false); // State to track hover
+    const [_isHovered2, setIsHovered2] = useState(false); // State to track hover
 
     const listUp = [
         Ant, Headless, Git, Bootstrap, Github, Js, Ts, Python,

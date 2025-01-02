@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function Scene() {
     const wrapperRef = useRef<HTMLDivElement | null>(null);
-    const modelHead = useRef<THREE.Object3D | null>(null); // Assuming Model is an Object3D
+    const modelHead = useRef<THREE.Group | null>(null);
     const [target, setTarget] = useState<[number, number, number]>([0, 0, 0]);
 
     useEffect(() => {
@@ -47,8 +47,7 @@ function Scene() {
                     position: [0, -1, 2],
                 }}
             >
-                {/* <axesHelper args={[5]} /> */}
-                {/* <OrbitControls /> */}
+                
                 <Model position={[0, -0.5, 0]} ref={modelHead} />
                 <ambientLight intensity={2} />
             </Canvas>

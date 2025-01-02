@@ -44,7 +44,7 @@ function App() {
 
     // Update progress as resources load
     const updateProgress = () => {
-      resources.forEach((resource) => {
+      resources.forEach((_resource) => {
         loadedResources++;
         const newProgress = (loadedResources / resources.length) * 100;
         setProgress(newProgress);
