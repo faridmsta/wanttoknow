@@ -77,24 +77,25 @@ function Intro() {
           <div className="right">
             <div className="image">
               <div className="img">
-                <m.img
-                  loading="lazy"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 3 }}
+                <div className="imgWrap">
+                  <m.img
+                    loading="lazy"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 3 }}
 
-                  src={me} alt="" />
-                <m.img
-                  loading="lazy"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 3 }}
+                    src={me} alt="" />
+                  <m.img
+                    loading="lazy"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 3 }}
 
-                  src={meMin} alt="" />
-
+                    src={meMin} alt="" />
+                </div>
               </div>
               <div className="svg">
-                
+
                 <m.svg
                   initial={{ opacity: 1 }}
                   animate={{ opacity: 0 }}
