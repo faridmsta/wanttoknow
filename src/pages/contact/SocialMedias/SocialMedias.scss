@@ -202,6 +202,11 @@
                         width: 20vw;
                         height: 30vh;
                         box-sizing: border-box;
+                        transform: translateX(0.5vw);
+                        @media screen and (max-width:1024px) {
+                            transform: translateX(1vw);
+
+                        }
                     }
 
                     .image:nth-child(1) {
