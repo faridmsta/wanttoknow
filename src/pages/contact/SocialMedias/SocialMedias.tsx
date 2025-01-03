@@ -2,11 +2,11 @@ import './SocialMedias.scss'
 import { motion as m, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
-import metaFarid from './../../../components/img/metaFarid.png'
-import gitbg from './../../../components/img/gitbg.png'
-import linkedin from './../../../components/img/linkedin.jpg'
-import instagram from './../../../components/img/instagram.jpg'
-import X from './../../../components/img/X.jpg'
+import metaFarid from './../../../components/img/metaFarid.webp'
+import gitbg from './../../../components/img/gitbg.webp'
+import linkedin from './../../../components/img/linkedin.webp'
+import instagram from './../../../components/img/instagram.webp'
+import X from './../../../components/img/X.webp'
 
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
