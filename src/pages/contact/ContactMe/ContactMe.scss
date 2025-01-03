@@ -91,10 +91,11 @@
                     }
 
                     button {
+                        transition: .3s;
                         color: white;
                         outline: none;
                         border: none;
-                        padding: 10px 15px;
+                        padding: 10px 16px;
                         font-size: 1.2rem;
 
                         background: #63326e;
@@ -103,6 +104,14 @@
                         backdrop-filter: blur(3.5px);
                         -webkit-backdrop-filter: blur(3.5px);
                         border: 1px solid rgba(255, 255, 255, 0.1);
+                        
+                    }
+                    
+                    button:hover {
+                        background: #171717;
+                        -webkit-box-shadow: #63326e 0 0 50px 3px;
+                        -moz-box-shadow: #63326e 0 0 50px 3px;
+                        box-shadow: #63326e 0 0 50px 3px;
 
                     }
 
