@@ -37,7 +37,7 @@ src/
 ├── hooks/             # Custom hooks for SEO and other utilities
 ├── pages/             # Pages of sites
 ├── models/            # 3D models and assets for Three.js
-├── uvalidation/       # Validation functions
+├── validations/        # Validation functions
 └── App.tsx            # Main application file
 ```
 
