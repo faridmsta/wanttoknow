@@ -1,4 +1,4 @@
-# WantToKnow.me
+# Want to know me?
 
 Welcome to the **WantToKnow.me** GitHub repository! This is a portfolio project designed to showcase your skills and creativity as a Frontend Developer. The website is built with cutting-edge technologies like **React TypeScript**, **Three.js**, **Blender**, and **Framer Motion**, with custom hooks and SEO optimization to deliver a stunning and seamless user experience.
 
