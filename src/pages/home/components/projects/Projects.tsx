@@ -121,6 +121,7 @@ function Projects() {
   ]
 
   const projectsRef = useRef<HTMLDivElement | null>(null);
+  
   const { scrollYProgress } = useScroll({
     target: projectsRef
   })
