@@ -21,18 +21,27 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
 
+
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* For horizontal scrollbar */
 }
 
-
+/* Track (background) */
 ::-webkit-scrollbar-track {
-  display: none;
-
+  background:black;
 }
 
+/* Thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  display: none;
+  background: #888;
+  border-radius: 10px;
+}
 
-} */
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
