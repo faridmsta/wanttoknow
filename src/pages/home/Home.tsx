@@ -10,7 +10,7 @@ function Home() {
         <section className="home">
             <Intro />
             <SkillsPage />
-            <Aboutme />
+            {/* <Aboutme /> */}
             <ExperienceNums />
             <Projects />
             <Contact />
