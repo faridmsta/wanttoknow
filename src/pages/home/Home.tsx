@@ -1,5 +1,5 @@
 import Contact from '../contact/Contact'
-// import Aboutme from './components/aboutme/Aboutme'
+import Aboutme from './components/aboutme/Aboutme'
 import ExperienceNums from './components/experienceNums/ExperienceNums'
 import Intro from './components/intro/Intro'
 import Projects from './components/projects/Projects'
@@ -10,7 +10,7 @@ function Home() {
         <section className="home">
             <Intro />
             <SkillsPage />
-            {/* <Aboutme /> */}
+            <Aboutme />
             <ExperienceNums />
             <Projects />
             <Contact />
