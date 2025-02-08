@@ -61,7 +61,7 @@ html {
   -webkit-backdrop-filter: blur(8.2px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  font-size: 1.2rem;
+  font-size: clamp(0.6rem, 0.4258rem + 0.8602vw, 1.2rem);
 
   & a{
     color: white;
