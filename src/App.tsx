@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css'
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion as m } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 
 import Lenis from 'lenis'
@@ -42,9 +42,6 @@ function App() {
             Alternatively, you can visit the
             <a href="https://wanttoknow.vercel.app/" target="_blank" rel="noopener noreferrer"> older version (v1.0)</a>.
           </div>
-
-
-
         ));
 
   }, [])
@@ -55,7 +52,7 @@ function App() {
 
 
   const [visibleSection, setVisibleSection] = useState(null);
-  const [isPageTaransition, setIsPageTaransition] = useState(false);
+  const [,setIsPageTaransition] = useState(false);
 
 
   useEffect(() => {
@@ -79,10 +76,7 @@ function App() {
       {
         // isLoading ? <AnimatePresence mode='wait' ><LoadingPage progress={fakeProgress} /></AnimatePresence>
         //   :
-        <m.div
-          initial={{ opacity: 1 }} // Set initial opacity to 1
-          animate={{ opacity: isPageTaransition ? 0 : 1 }} // Set opacity based on visibleSection state
-          transition={{ duration: 0.5 }}
+        <div
           className='app'>
           <AnimatePresence mode='wait' >
             <Header setVisibleSection={setVisibleSection} />
@@ -90,7 +84,7 @@ function App() {
               <Route path='/' element={<PageAnimator><Home /></PageAnimator>} />
             </Routes>
           </AnimatePresence>
-        </m.div>
+        </div>
       }
     </>
   )
