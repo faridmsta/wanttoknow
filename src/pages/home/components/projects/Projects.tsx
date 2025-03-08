@@ -2,6 +2,7 @@ import './Projects.scss'
 import { AnimatePresence, motion as m, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
+import edoc from './sites/e-docsaztu.webp'
 import adminpanel from './sites/adminpanel.webp'
 import aeroclimaaz from './sites/aeroclimaaz.webp'
 import bloggy from './sites/bloggy-me.webp'
@@ -25,93 +26,100 @@ import { TfiArrowTopRight } from "react-icons/tfi";
 function Projects() {
   const projects = [
     {
-      id: 2,
+      id: 1,
+      image: edoc,
+      title: "E-Docs Koica - AzTU",
+      link: 'https://sso.aztu.edu.az/',
+      githubLink: ''
+    },
+    {
+      id: 1,
       image: aeroclimaaz,
       title: "Aeroclima.az",
       link: 'https://aeroclima.az/',
       githubLink: ''
     },
     {
-      id: 1,
+      id: 2,
       image: boomerangCV,
       title: "Vacancy platform",
       link: '',
       githubLink: ''
     },
     {
-      id: 1,
+      id: 3,
       image: starbucks,
       title: "Starbucks",
       link: 'https://starbucks-dusky.vercel.app/',
-      githubLink: 'https://github.com/faridmsta/Starbucks'
+      githubLink: ''
     },
     {
-      id: 1,
+      id: 4,
       image: adminpanel,
       title: "Admin Panel",
       link: 'https://adminpanel-black.vercel.app/',
       githubLink: 'https://github.com/faridmsta/adminpanel'
     },
     {
-      id: 4,
+      id: 5,
       image: bloggy,
       title: "Blog site",
       link: '',
       githubLink: 'https://github.com/faridmsta/bloggyme'
     },
     {
-      id: 1,
+      id: 6,
       image: unipage,
       title: "Uni page",
       link: 'https://site-for-university.vercel.app/',
-      githubLink: 'https://github.com/faridmsta/Site-for-University'
+      githubLink: ''
     },
     {
-      id: 1,
+      id: 7,
       image: turboaz,
       title: "Turbo.az",
       link: 'https://fake-car-selling-site.vercel.app/',
-      githubLink: 'https://github.com/faridmsta/Fake-Car-Selling-Site'
+      githubLink: ''
     },
 
     {
-      id: 1,
+      id: 8,
       image: rpc,
       title: "Rpc",
-      link: 'https://faridmsta.github.io/RockPaperScissors/',
-      githubLink: 'https://github.com/faridmsta/RockPaperScissors?tab=readme-ov-file'
+      link: '',
+      githubLink: ''
     },
     {
-      id: 1,
+      id: 9,
       image: educaste,
       title: "Educaste",
-      link: 'https://education-site-homepage.vercel.app/',
-      githubLink: 'https://github.com/faridmsta/EducationSiteHomepage '
+      link: '',
+      githubLink: ''
     },
 
     {
-      id: 1,
+      id: 10,
       image: calendar,
       title: "Calendar",
       link: 'https://faridmsta.github.io/Calendar/',
-      githubLink: 'https://github.com/faridmsta/Calendar'
+      githubLink: ''
     },
     {
-      id: 1,
+      id: 11,
       image: booking,
       title: "Booking",
       link: 'https://reservation-booking-black.vercel.app/',
-      githubLink: 'https://github.com/faridmsta/Reservation-Booking '
+      githubLink: ''
     },
     {
-      id: 1,
+      id: 12,
       image: ecolink,
       title: "EcoLink App",
       link: '',
       githubLink: ''
     },
     {
-      id: 1,
+      id: 13,
       image: calculatorExpo,
       title: "Calculator App",
       link: '',
