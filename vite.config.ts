@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [['babel-plugin-react-compiler', {
-          target: '18',
-          "exclude": ["framer-motion"]
-        }]],
+        // plugins: [['babel-plugin-react-compiler', {
+        //   target: '18',
+        //   "exclude": ["motion"]
+        // }]],
       },
     })
   ],

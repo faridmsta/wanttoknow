@@ -1,4 +1,5 @@
 // @react Compiler skip
+/* @babel/no-babel */
 import './Intro.scss'
 import me from './../../../../components/img/meBlack.png'
 import meMin from './../../../../components/img/meBlack-min.png'
