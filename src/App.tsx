@@ -8,7 +8,6 @@ import Lenis from 'lenis'
 
 import Home from './pages/home/Home'
 import Header from './components/header/Header';
-import PageAnimator from './components/PageAnimator/PageAnimator';
 
 
 
@@ -81,7 +80,7 @@ function App() {
           <AnimatePresence mode='wait' >
             <Header setVisibleSection={setVisibleSection} />
             <Routes location={location} key={location.pathname} >
-              <Route path='/' element={<PageAnimator><Home /></PageAnimator>} />
+              <Route path='/' element={<Home />} />
             </Routes>
           </AnimatePresence>
         </div>
