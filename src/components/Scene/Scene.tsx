@@ -5,7 +5,12 @@ import Model from '../model/Model';
 
 import { useState } from 'react';
 
+
 function Scene() {
+
+    return <></>
+
+
     const wrapperRef = useRef<HTMLDivElement | null>(null);
     const modelHead = useRef<THREE.Group | null>(null);
     const [target, setTarget] = useState<[number, number, number]>([0, 0, 0]);

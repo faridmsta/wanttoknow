@@ -2,61 +2,64 @@ import { Link } from 'react-router-dom'
 import './Header.scss'
 import fmlogo from './../icons/fmlogo.png'
 import { motion as m } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useMousePosition from '../../hooks/useMousePosition'
 
 import Pdf from "./../../components/res/faridmustafayevresume.pdf";
 
-function Header({setVisibleSection}:{setVisibleSection:Function}) {
-
+function Header({ setVisibleSection }: { setVisibleSection: Function }) {
     const header = useRef<HTMLUListElement | null>(null);
+    const { x, y } = useMousePosition(header);
+    const [maskSize, setMaskSize] = useState(0);
+    const [showHeader, setShowHeader] = useState(false);
 
-    const { x, y } = useMousePosition(header)
-    const [maskSize, setMaskSize] = useState(0)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 1000) {
+                setShowHeader(true);
+            } else {
+                setShowHeader(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     function OpenCv() {
         window.open(Pdf);
     }
 
     const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault(); 
-        const targetId = e.currentTarget.getAttribute('href')?.slice(1); 
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href')?.slice(1);
         if (targetId) {
-          setTimeout(() => {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth' }); 
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
-          }, 600); 
         }
-      };
-
+    };
 
     return (
         <m.header
-
-            onMouseEnter={() => { setMaskSize(200) }}
-            onMouseLeave={() => { setMaskSize(0) }}
-
-            initial={{
-                top:-70
-            }}
+            onMouseEnter={() => setMaskSize(200)}
+            onMouseLeave={() => setMaskSize(0)}
             animate={{
-                top:50
+                top: showHeader ? 50 : -100
             }}
             transition={{
-                duration: 1.5,
-                delay:3,
-                type:'spring',
+                type: 'spring',
                 stiffness: 100,
+                damping: 15
             }}
         >
             <nav>
-                <ul className='nonmaskul' >
+                <ul className='nonmaskul'>
                     <li className='logo'><Link to="/"><img src={fmlogo} alt="" /></Link></li>
-                    <li onClick={() => setVisibleSection("intro")} ><a href='#intro' onClick={handleNavigation}  >Home</a></li>
-                    <li onClick={() => setVisibleSection("projects")} ><a href='#projects' onClick={handleNavigation}  >Projects</a></li>
-                    <li onClick={() => setVisibleSection("contact")} ><a href='#contact' onClick={handleNavigation} >Contact</a></li>
+                    <li onClick={() => setVisibleSection("intro")}><a href='#intro' onClick={handleNavigation}>Home</a></li>
+                    <li onClick={() => setVisibleSection("projects")}><a href='#projects' onClick={handleNavigation}>Projects</a></li>
+                    <li onClick={() => setVisibleSection("contact")}><a href='#contact' onClick={handleNavigation}>Contact</a></li>
                     <li><button onClick={OpenCv}>Cv</button></li>
                 </ul>
                 <m.ul
@@ -68,20 +71,19 @@ function Header({setVisibleSection}:{setVisibleSection:Function}) {
                         type: 'tween',
                         ease: 'backOut'
                     }}
-
                     ref={header}
-                    className='maskul'>
+                    className='maskul'
+                >
                     <li className='logo'><Link to="/"><img src={fmlogo} alt="" /></Link></li>
-                    <li onClick={() => setVisibleSection("intro")} ><a href='#intro' onClick={handleNavigation}  >Home</a></li>
-                    <li onClick={() => setVisibleSection("projects")} ><a href='#projects' onClick={handleNavigation}  >Projects</a></li>
-                    <li onClick={() => setVisibleSection("contact")} ><a href='#contact' onClick={handleNavigation} >Contact</a></li>
+                    <li onClick={() => setVisibleSection("intro")}><a href='#intro' onClick={handleNavigation}>Home</a></li>
+                    <li onClick={() => setVisibleSection("projects")}><a href='#projects' onClick={handleNavigation}>Projects</a></li>
+                    <li onClick={() => setVisibleSection("contact")}><a href='#contact' onClick={handleNavigation}>Contact</a></li>
                     <li><button onClick={OpenCv}>Cv</button></li>
                 </m.ul>
             </nav>
-
-
         </m.header>
-    )
+    );
 }
+
 
 export default Header

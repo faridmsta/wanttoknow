@@ -46,9 +46,9 @@ function ContactMe() {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
-    if (formData.name.length == 0
-      || formData.email.length == 0
-      || formData.message.length == 0) {
+    if (formData.name.trim().length == 0
+      || formData.email.trim().length == 0
+      || formData.message.trim().length == 0) {
       toast.custom((t) => (
         <m.div
           initial={{
@@ -125,7 +125,7 @@ function ContactMe() {
         <div className="contactMeInner">
           <h3>Get in touch with me</h3>
           <div className="context">
-            {window.innerWidth > 768 &&
+            {window.innerWidth > 1024 &&
               <div className="left">
                 <Canvas camera={{ position: [100, 50, 20] }} >
                   <OrbitControls enableZoom={false}  enablePan={false} />

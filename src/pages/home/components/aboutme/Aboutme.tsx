@@ -23,7 +23,7 @@ function Aboutme() {
             <div className="container">
                 <div className="aboutmeInner">
                     <div className="left">
-                        {window.innerWidth>768 && <Scene /> }
+                        { <Scene /> }
                     </div>
                     <div className="right">
                         <div className="info">

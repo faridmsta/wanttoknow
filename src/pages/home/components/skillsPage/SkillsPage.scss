@@ -3,6 +3,7 @@
     height: 200px;
     width: 100%;
     background: black;
+    overflow-x: hidden;
 
     @media screen and (max-width:768px) {
         height: 160px;
