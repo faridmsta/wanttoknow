@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function Scene() {
 
-    return <></>
+    if (window.innerWidth<768 ) return <></>
 
 
     const wrapperRef = useRef<HTMLDivElement | null>(null);
