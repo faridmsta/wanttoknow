@@ -1,6 +1,6 @@
 'use client'
 import { motion as m, useScroll, useTransform } from "framer-motion"
-import { useEffect, useRef } from "react"
+import {  useRef } from "react"
 import './Intropage.scss'
 
 const Intropage = () => {
