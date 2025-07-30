@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 
-import Lenis from 'lenis'
+// import Lenis from 'lenis'
 
 import Home from './pages/home/Home'
 import Header from './components/header/Header';
@@ -19,15 +19,15 @@ function App() {
 
 
 
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  }, []);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   useEffect(() => {
       toast.custom(
